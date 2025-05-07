@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { css } from '@emotion/css';
 import { 
-  ScribendijsEditorProps, 
+  StilusjsEditorProps, 
   EditorContent, 
   SelectionState, 
   TextFormat, 
@@ -20,7 +20,7 @@ import Toolbar from './Toolbar';
 import Element from './Element';
 import Leaf from './Leaf';
 
-const ScribendijsEditor: React.FC<ScribendijsEditorProps> = ({
+const StilusjsEditor: React.FC<StilusjsEditorProps> = ({
   value,
   onChange,
   config = {},
@@ -184,4 +184,4 @@ const ScribendijsEditor: React.FC<ScribendijsEditorProps> = ({
   );
 };
 
-export default ScribendijsEditor; 
+export default StilusjsEditor; 

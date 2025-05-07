@@ -1,4 +1,4 @@
-import ScribendijsEditor from './components/ScribendijsEditor';
+import StilusjsEditor from './components/StilusjsEditor';
 import Element from './components/Element';
 import Leaf from './components/Leaf';
 import Toolbar from './components/Toolbar';
@@ -32,12 +32,12 @@ import type {
   EditorContent,
   EditorConfig,
   SelectionState,
-  ScribendijsEditorProps
+  StilusjsEditorProps
 } from './types';
 
 // Экспорт компонентов
 export {
-  ScribendijsEditor,
+  StilusjsEditor,
   Element,
   Leaf,
   Toolbar
@@ -74,8 +74,8 @@ export type {
   EditorContent,
   EditorConfig,
   SelectionState,
-  ScribendijsEditorProps
+  StilusjsEditorProps
 };
 
 // Экспорт по умолчанию
-export default ScribendijsEditor; 
+export default StilusjsEditor; 

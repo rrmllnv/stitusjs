@@ -1,4 +1,4 @@
-# Scribendijs
+# Stilusjs
 
 Легкий и гибкий текстовый редактор для React-приложений, созданный с нуля без зависимостей от других редакторов.
 
@@ -16,53 +16,49 @@
 ## Установка
 
 ```bash
-npm install scribendijs
+npm install stilusjs
 ```
 
 или
 
 ```bash
-yarn add scribendijs
+yarn add stilusjs
 ```
 
-## Использование
-
-### Базовый пример
+## Простой пример
 
 ```jsx
-import React, { useState } from 'react';
-import { ScribendijsEditor, createEmptyDocument } from 'scribendijs';
+import React from 'react';
+import { StilusjsEditor, createEmptyDocument } from 'stilusjs';
 
-const App = () => {
-  const [content, setContent] = useState(createEmptyDocument());
+function MyEditor() {
+  const [content, setContent] = React.useState(createEmptyDocument());
 
   return (
     <div>
-      <h1>Scribendijs Editor</h1>
-      <ScribendijsEditor
+      <h1>Stilusjs Editor</h1>
+      <StilusjsEditor
         value={content}
         onChange={setContent}
       />
     </div>
   );
-};
-
-export default App;
+}
 ```
 
-### Конфигурация
+## Пример с настройками
 
 ```jsx
-import React, { useState } from 'react';
-import { ScribendijsEditor, createEmptyDocument } from 'scribendijs';
+import React from 'react';
+import { StilusjsEditor, createEmptyDocument } from 'stilusjs';
 
-const App = () => {
-  const [content, setContent] = useState(createEmptyDocument());
+function MyEditor() {
+  const [content, setContent] = React.useState(createEmptyDocument());
 
   return (
     <div>
-      <h1>Scribendijs Editor с настройками</h1>
-      <ScribendijsEditor
+      <h1>Stilusjs Editor с настройками</h1>
+      <StilusjsEditor
         value={content}
         onChange={setContent}
         config={{
@@ -72,27 +68,25 @@ const App = () => {
             bold: true,
             italic: true,
             underline: true,
-            strikethrough: true,
             heading: true,
             list: true,
             blockquote: true,
-            codeBlock: true,
+            codeBlock: false,
             image: true,
-            table: true,
+            table: false,
             alignment: true
           }
         }}
+        className="my-custom-editor"
       />
     </div>
   );
-};
-
-export default App;
+}
 ```
 
 ## Структура данных
 
-Scribendijs использует простую структуру данных для представления контента, что облегчает сериализацию и десериализацию:
+Stilusjs использует простую структуру данных для представления контента, что облегчает сериализацию и десериализацию:
 
 ```typescript
 // Пример структуры данных
@@ -130,7 +124,7 @@ const content = [
 
 ### Компоненты
 
-- `ScribendijsEditor` - Основной компонент редактора
+- `StilusjsEditor` - Основной компонент редактора
 - `Element` - Компонент для отображения элементов
 - `Leaf` - Компонент для отображения текста
 - `Toolbar` - Панель инструментов

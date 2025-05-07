@@ -1,9 +1,10 @@
 {
-  "name": "scribendijs",
+  "name": "stilusjs",
   "version": "0.1.0",
   "description": "Pure React rich text editor from scratch",
   "author": "",
   "license": "MIT",
+  "homepage": "https://www.mllnv.com/opensource/stilusjs/",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -19,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rrmllnv/scribendijs.git"
+    "url": "git+https://github.com/rrmllnv/stilusjs.git"
   },
   "keywords": [
     "react",

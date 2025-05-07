@@ -146,7 +146,7 @@ export interface SelectionState {
 /**
  * Свойства компонента редактора
  */
-export interface ScribendijsEditorProps {
+export interface StilusjsEditorProps {
   value: EditorContent;
   onChange: (value: EditorContent) => void;
   config?: EditorConfig;

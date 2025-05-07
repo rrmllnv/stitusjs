@@ -1,5 +1,5 @@
+import { StilusjsEditor, createEmptyDocument, EditorContent } from '../src';
 import React, { useState } from 'react';
-import { ScribendijsEditor, createEmptyDocument, EditorContent } from '../src';
 
 const BasicExample: React.FC = () => {
   const [content, setContent] = useState<EditorContent>(createEmptyDocument());
@@ -10,32 +10,36 @@ const BasicExample: React.FC = () => {
   };
 
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-      <h1>Scribendijs Basic Example</h1>
-      
-      <div style={{ marginBottom: '20px' }}>
-        <p>This is a basic example of the Scribendijs editor. Try formatting text using the toolbar.</p>
-      </div>
-      
-      <div style={{ border: '1px solid #ddd', borderRadius: '5px', padding: '10px' }}>
-        <ScribendijsEditor
-          value={content}
-          onChange={handleChange}
-          config={{
-            placeholder: 'Start typing here...',
-            enabledFeatures: {
-              bold: true,
-              italic: true,
-              underline: true,
-              strikethrough: true,
-              heading: true,
-              list: true,
-              blockquote: true,
-              codeBlock: true,
-              alignment: true
-            }
-          }}
-        />
+    <div className="example-wrapper">
+      <div className="example-container">
+        <div className="example-header">
+          <h1>Stilusjs Basic Example</h1>
+        </div>
+        
+        <div className="example-description">
+          <p>This is a basic example of the Stilusjs editor. Try formatting text using the toolbar.</p>
+        </div>
+        
+        <div className="editor-container">
+          <StilusjsEditor
+            value={content}
+            onChange={handleChange}
+            config={{
+              placeholder: 'Start typing here...',
+              enabledFeatures: {
+                bold: true,
+                italic: true,
+                underline: true,
+                strikethrough: true,
+                heading: true,
+                list: true,
+                blockquote: true,
+                codeBlock: true,
+                alignment: true
+              }
+            }}
+          />
+        </div>
       </div>
       
       <div style={{ marginTop: '30px' }}>
